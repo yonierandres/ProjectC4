@@ -4,9 +4,9 @@ import { Enum_rol, Enum_EstadoUsuario } from "./enums"
 // Ayuda a ralizar una validación de los tipos, esto es gracias a typescript
 interface User {
     email: string;
-    identification: string;
+    identificacion: string;
     nombre: string;
-    apellidos: string;
+    apellido: string;
     rol: Enum_rol;
     estado: Enum_EstadoUsuario;
 }
@@ -23,7 +23,7 @@ const userSchema = new Schema<User>({
                 message: 'el formato del correo no es el adecuado',
             },  
         },
-    identification: { 
+    identificacion: { 
         type: String, 
         required: true,
         unique: true
@@ -32,7 +32,7 @@ const userSchema = new Schema<User>({
         type: String, 
         required:true 
     },
-    apellidos: { 
+    apellido: { 
         type: String, 
         required:true
     },
@@ -44,7 +44,7 @@ const userSchema = new Schema<User>({
     estado:{
         type: String, 
         enum: Enum_EstadoUsuario,
-        default: Enum_EstadoUsuario.pendiente,
+        default: Enum_EstadoUsuario.PENDIENTE,
     }
     
 

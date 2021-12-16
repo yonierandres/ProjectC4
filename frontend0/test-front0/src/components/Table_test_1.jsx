@@ -1,8 +1,6 @@
 
 
-import React from 'react'
-
-const Table_test_1 = () => {
+function Table_test_1() {
     return (
         <div>
             <table>

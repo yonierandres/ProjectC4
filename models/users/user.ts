@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { Enum_rol, Enum_EstadoUsuario } from "./enums"
+import { Enum_rol, Enum_EstadoUsuario } from "../enums/enums"
 
 // Ayuda a ralizar una validación de los tipos, esto es gracias a typescript
 interface User {

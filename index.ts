@@ -3,14 +3,14 @@ import cors from "cors"; //permite que entren requests desde diferentes sitios
 import { ApolloServer } from "apollo-server-express";
 import dotenv from "dotenv";
 import conectarDB from "./db/db";
-import { typeDefs } from "./graphql/types";
+import { tipos } from "./graphql/types";
 import { resolvers } from "./graphql/resolvers";
 
 
 dotenv.config();
 
 const server = new ApolloServer({
-  typeDefs: typeDefs, //definiciones de los modelos
+  typeDefs: tipos, //definiciones de los modelos
   resolvers: resolvers, // como controladores en rest
 });
 

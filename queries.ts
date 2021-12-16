@@ -1,8 +1,8 @@
 import conectarDB from "./db/db";
-import { userModel } from "./models/user";
-import { Enum_rol } from "./models/enums"
-import { projectModel } from "./models/project";
-import { objetiveModel } from "./models/objetive";
+import { userModel } from "./models/users/user";
+import { Enum_rol } from "./models/enums/enums"
+import { projectModel } from "./models/projects/project";
+import { objetiveModel } from "./models/objective/objective";
 import { SchemaTypes } from "mongoose";
 
 const main = async () => {

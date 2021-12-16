@@ -1,14 +1,20 @@
 import './App.css';
 import HolaMundo from './components/HolaMundo';
-import Table_test_1 from './components/Table_test_1';
+import { ApolloProvider } from "@apollo/client";
+import client from './Usuarios/client';
+import {Repository} from './Repository/Repository';
+
 
 function App() {
   return (
     <div>
-      <HolaMundo />
-      <Table_test_1 />
+      <HolaMundo />      
+    <ApolloProvider client={client}>
+      <Repository name= "ProjectC4" owner= "yonierandres" />
+      <Repository name= "ProyectoVentas" owner= "inghoro" />
+      <Repository name= "apollo-client" owner= "apollographql" />
+    </ApolloProvider>
     </div>
-
   );
 }
 

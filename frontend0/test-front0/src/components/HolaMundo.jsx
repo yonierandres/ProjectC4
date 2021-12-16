@@ -3,7 +3,11 @@
 function HolaMundo()
 {
     return (
-        <div>Testing Frontend and apollo</div>
+        <div>
+            <h1>
+            Testing Frontend and Apollo
+            </h1>
+        </div>
     );
 }
 

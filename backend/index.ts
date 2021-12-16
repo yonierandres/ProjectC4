@@ -1,29 +1,28 @@
+import express from "express";
+import cors from "cors"; //permite que entren requests desde diferentes sitios
+import { ApolloServer } from "apollo-server-express";
+import dotenv from "dotenv";
 import conectarDB from "./db/db";
-import UserModel from "./models/user";
+import { typeDefs } from "./graphql/types";
+import { resolvers } from "./graphql/resolvers";
 
-const main = async () => {
+
+dotenv.config();
+
+const server = new ApolloServer({
+  typeDefs: typeDefs, //definiciones de los modelos
+  resolvers: resolvers, // como controladores en rest
+});
+
+const app = express();
+
+app.use(express.json()); // se configura el modo de trabajo en formato json
+app.use(cors()); // la app permitirá hacer request desde diferentes direcciones
+app.listen({ port: process.env.PORT || 4000 }, async () => {
   await conectarDB();
+  await server.start();
 
-  // await UserModel.create({
-  //   email: "user@example.com",
-  //   identification: "12345678",
-  //   nombre: "NombrePrueba",
-  //   apellidos: "apellidosPrueba",
-  // })
-  //   .then((u) => {
-  //     console.log("user created", u);
-  //   })
-  //   .catch((err) => {
-  //     console.error("error creating user", err);
-  //   });
+  server.applyMiddleware({ app }); //usa los mismo middlewares de app
 
-  await UserModel.find()
-    .then((u) => {
-      console.log("user found", u);
-    })
-    .catch((err) => {
-      console.error("error finding user", err);
-    });
-};
-
-main();
+  console.log("servidor onlined");
+});

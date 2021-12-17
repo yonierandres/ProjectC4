@@ -10,9 +10,10 @@ function App() {
     <div>
       <HolaMundo />      
     <ApolloProvider client={client}>
-      <Repository name= "ProjectC4" owner= "yonierandres" />
+      {/* <Repository name= "ProjectC4" owner= "yonierandres" />
       <Repository name= "ProyectoVentas" owner= "inghoro" />
-      <Repository name= "apollo-client" owner= "apollographql" />
+      <Repository name= "apollo-client" owner= "apollographql" /> */}
+      <Repository />
     </ApolloProvider>
     </div>
   );

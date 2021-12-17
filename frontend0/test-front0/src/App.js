@@ -3,6 +3,7 @@ import HolaMundo from './components/HolaMundo';
 import { ApolloProvider } from "@apollo/client";
 import client from './Usuarios/client';
 import {Repository} from './Repository/Repository';
+import {Repository2} from './Repository/Repository2';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Repository name= "ProyectoVentas" owner= "inghoro" />
       <Repository name= "apollo-client" owner= "apollographql" /> */}
       <Repository />
+      <Repository2 />
     </ApolloProvider>
     </div>
   );

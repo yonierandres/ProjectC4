@@ -14,11 +14,11 @@ interface Inscription{
 
 const inscriptionSchema = new Schema<Inscription>({
     fechaIngreso: {
-        required: true,
+        required: false,
         type: Date,
     },
     fechaEgreso: {
-        required: true,
+        required: false,
         type: Date,
     },
     proyecto: {
@@ -26,11 +26,11 @@ const inscriptionSchema = new Schema<Inscription>({
         ref: projectModel,
         required: true,
     },
-    estudiante: [{
+    estudiante: {
         type: Schema.Types.ObjectId,
         ref: userModel,
         required: true,
-    }],
+    },
     estado: {
         type: String,
         enum: Enum_EstadoInscripcion,

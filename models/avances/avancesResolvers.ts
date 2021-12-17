@@ -6,6 +6,10 @@ const resolversAvances = {
       const avances = await advancementModel.find().populate('proyecto').populate('creadoPor');
       return avances;
     },
+    filtrarAvance: async (parent, args) => {
+        const avanceFiltrado = await advancementModel.find({proyecto: args.idProyecto}).populate('proyecto').populate('creadoPor');
+        return avanceFiltrado;
+    }
   },
 
   Mutation: {

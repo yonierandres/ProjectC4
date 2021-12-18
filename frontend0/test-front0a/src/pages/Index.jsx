@@ -9,6 +9,9 @@ const Index = () => {
             <form action= "/usuarios" method = "get">                
                 <input type="submit" value="Usuarios" />
             </form>
+            <form action= "/usuarios2" method = "get">                
+                <input type="submit" value="Usuarios2" />
+            </form>
             <form action= "/avances" method = "get">                
                 <input type="submit" value="Avances" />
             </form>

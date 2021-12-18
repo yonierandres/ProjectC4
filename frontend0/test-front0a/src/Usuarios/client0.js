@@ -10,7 +10,7 @@ const client0 = new ApolloClient({
     headers: 
             {
                 // Authorization: "Bearer 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"
-                Authorization: "Bearer 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 "
+                Authorization: "Bearer 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"
                 
             },            
 });

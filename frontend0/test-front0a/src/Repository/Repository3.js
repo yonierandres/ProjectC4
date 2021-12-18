@@ -34,7 +34,8 @@ function Repository3() {
     // return <pre>{JSON.stringify(data, null, 2)}</pre>;
     return (
         <div>
-            <pre>{JSON.stringify(data, null, 2)}</pre>                        
+            <pre>{JSON.stringify(data, null, 2)}</pre>     
+            <h2>{ data.nombre }</h2>            
         </div>        
     );
 }

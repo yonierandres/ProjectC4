@@ -15,6 +15,9 @@ const Index = () => {
             <form action= "/avances" method = "get">                
                 <input type="submit" value="Avances" />
             </form>
+            <form action= "/test" method = "get">                
+                <input type="submit" value="Test" />
+            </form>
         </div>
     );
 }

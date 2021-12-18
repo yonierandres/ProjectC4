@@ -6,6 +6,7 @@ import Avances from './pages/Avances';
 import Index from './pages/Index';
 import Usuarios2 from './pages/Usuarios2';
 import Test from './pages/Test';
+import './styles/tabla.css';
 
 
 

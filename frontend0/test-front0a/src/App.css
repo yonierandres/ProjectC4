@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* ======================================================= */
+
+.tabla {
+  width: 100%;
+  margin: 10px;
+  overflow-y: scroll;
+}
+
+.tabla td,
+.tabla th {
+  padding: 8px;
+  border: 1px solid grey;    
+}
+
+.tabla th {
+  background-color: green;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+.tabla tr:nth-child(even) {
+  background-color: rgb(131, 131, 156);
+}
+
+.tabla tr:hover {
+  background-color: #ddd;
+}
+

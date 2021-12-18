@@ -1,17 +1,20 @@
 import './App.css';
 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Usuarios from './pages/Usuarios';
 import Avances from './pages/Avances';
 import Index from './pages/Index';
 import Usuarios2 from './pages/Usuarios2';
 import Test from './pages/Test';
-import './styles/tabla.css';
+
+
 
 
 
 function App() {
-  return (    
+  return (  
+    <div>  
       <Router>
         <Routes>
           <Route exact path="/usuarios" element={<Usuarios />}/>    
@@ -20,7 +23,8 @@ function App() {
           <Route exact path="/test" element={<Test/>}/>
           <Route exact path="/" element={<Index />}/>            
         </Routes>
-      </Router>
+      </Router>            
+      </div>
   );
 }
 

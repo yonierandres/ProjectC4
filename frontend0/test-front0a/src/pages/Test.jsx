@@ -14,9 +14,10 @@ const Test = () => {
                 <input type="submit" value="Regresar" />
             </form>
             <ApolloProvider client={client0}>
-            <Repo_test name= "ProjectC4" owner= "yonierandres" />
+            {/* <Repo_test name= "ProjectC4" owner= "yonierandres" /> */}
             <Repo_test name= "ProyectoVentas" owner= "inghoro" />
-            <Repo_test name= "apollo-client" owner= "apollographql" />
+            <Repo_test name= "Proyecto_Ciclo3" owner= "inghoro" />
+            {/* <Repo_test name= "apollo-client" owner= "apollographql" /> */}
             </ApolloProvider>      
                   
         </div>
